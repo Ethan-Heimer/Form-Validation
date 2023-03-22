@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id = "form">
+        <fieldset>
+            <legend>Step 1. Enter Details</legend>
+
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="First Name" placeholder="First Name" pattern="[a-zA-Z]*" required>
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="Last Name" placeholder="Last Name" pattern="[a-zA-Z]*" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" placeholder="Email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone" placeholder="Phone Number" pattern="([0-9]{3}[-]?){2}[0-9]{4}" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Step 2. Delivery Address</legend>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="Address" placeholder="Address" style="resize: none; height: 100px;"></textarea>
+
+            <label for="zip-code">Zip Code</label>
+            <input type="text" id="zip-code" name="Zip Code" placeholder="Zip Code" pattern="[0-9]{5}" required>
+
+            <label for="country">Country</label>
+            <select id="country" name="Country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+                <option value="uk">UK</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Step 3. Payment Info</legend>
+
+            <!--Card Type-->
+            <label for="visa">Visa</label>
+            <input type="radio" id="visa" name="Card Type" value="visa">
+
+            <label for="master">Master Card</label>
+            <input type="radio" id="master" name="Card Type" value="master">
+
+            <label for="amex">American Express</label>
+            <input type="radio" id="amex" name="Card Type" value="amex">
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="Card Number" placeholder="Card Number" required>
+
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" name="CVC" placeholder="CVC" required>
+
+            <label for="cardholder-name">Cardholder Name</label>
+            <input type="text" id="cardholder-name" name="Cardholder Name" placeholder="Name On Card" required>
+        </fieldset>
+
+        <input type="submit">
+    </form>
+
+    <div id="display" >
+
+    </div>
+
+    <script src="app.js">
+
+    </script>
+</body>
+</html>
